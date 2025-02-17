@@ -1,5 +1,16 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsBooleanString, IsEmail, IsNotEmpty, IsOptional, IsString, MaxLength, MinLength } from 'class-validator';
+import { BloodGroupType } from '@src/app/modules/userInfo/enums/userInfo.enum';
+import {
+  IsBooleanString,
+  IsDateString,
+  IsEmail,
+  IsEnum,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+  MaxLength,
+  MinLength,
+} from 'class-validator';
 
 export class CreateUserDTO {
   @ApiProperty({
@@ -41,6 +52,24 @@ export class CreateUserDTO {
   @MinLength(8)
   @MaxLength(20)
   readonly password!: string;
+
+  @ApiProperty({
+    type: String,
+    required: false,
+    example: '1990-01-01T00:00:00Z',
+  })
+  @IsOptional()
+  @IsDateString()
+  readonly birthday?: Date;
+
+  @ApiProperty({
+    enum: BloodGroupType,
+    required: false,
+    example: 'B+',
+  })
+  @IsOptional()
+  @IsEnum(BloodGroupType)
+  readonly bloodGroup?: BloodGroupType;
 
   @ApiProperty({
     type: String,

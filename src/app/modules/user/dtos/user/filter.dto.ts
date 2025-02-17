@@ -1,3 +1,3 @@
-import { BaseFilterDTO } from '@src/app/base';
+import { FilterUserInfoDTO } from '@src/app/modules/userInfo/dtos';
 
-export class FilterUserDTO extends BaseFilterDTO {}
+export class FilterUserDTO extends FilterUserInfoDTO {}

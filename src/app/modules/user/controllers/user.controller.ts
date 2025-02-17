@@ -13,7 +13,7 @@ import { UserService } from '../services/user.service';
 @UseGuards(JwtIdentityGuard)
 @Controller('users')
 export class UserController {
-  RELATIONS = ['createdBy', 'updatedBy'];
+  RELATIONS = ['userInfo', 'createdBy', 'updatedBy'];
   constructor(private readonly userService: UserService) {}
 
   @Get()

@@ -17,6 +17,7 @@ import { ResponseInterceptor } from './interceptors/response.interceptor';
 import { AuthModule } from './modules/auth/auth.module';
 import { IdentityModule } from './modules/identity/identity.module';
 import { UserModule } from './modules/user/user.module';
+import { UserInfoModule } from './modules/userInfo/userInfo.module';
 
 const appConfig = new AppConfigHelper(new ConfigService());
 
@@ -36,7 +37,7 @@ const COMMON_MODULES = [
   ...(appConfig.isDevelopment ? [] : [ScheduleModule.forRoot()]),
 ];
 
-const FEATURE_MODULES = [HelpersModule, DatabaseModule, IdentityModule, AuthModule, UserModule];
+const FEATURE_MODULES = [HelpersModule, DatabaseModule, IdentityModule, AuthModule, UserModule, UserInfoModule];
 
 const MODULES = [...COMMON_MODULES, ...FEATURE_MODULES];
 

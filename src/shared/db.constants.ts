@@ -1,5 +1,6 @@
 export enum ENUM_COLLECTION_NAMES {
   USERS = 'users',
+  USERS_INFO = 'users_info',
 }
 
 export enum ENUM_FIELD_TYPES {
