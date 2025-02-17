@@ -1,0 +1,37 @@
+# Node modules
+/node_modules/
+
+# Dependency directory
+/.pnp
+.pnp.js
+
+# Build output
+/dist/
+/build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Test coverage
+/coverage/
+
+# Environment variables
+*.env
+
+# IDE & editor directories
+.idea/
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Backups
+backups/
+
+# Uploads
+uploads/
+
+# OS-specific files
+.DS_Store
+Thumbs.db

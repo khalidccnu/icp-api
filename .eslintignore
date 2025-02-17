@@ -1,0 +1,43 @@
+# Node modules
+/node_modules/
+
+# Dependency directory
+/.pnp
+.pnp.js
+
+# Build output
+/dist/
+/build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Test coverage
+/coverage/
+
+# Environment variables
+*.env
+
+# IDE & editor directories
+.idea/
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Backups
+backups/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Docker-specific files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Ignore test-related files
+test/
+**/*spec.ts
